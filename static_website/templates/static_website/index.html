@@ -1,0 +1,148 @@
+{% extends './base.html' %}
+
+{% block hero-image-text %}
+<div class="container-fluid hero-text">
+  <p class="hero-home-heading text-center">All Wireless Inc</p>  
+  <p class = "hero-home-subheading text-center">
+    Authorized Dealer and Phone Repairs
+  </p>
+</div>
+{% endblock %}
+
+{% block mobile-home-nav %}
+<li class="nav-item active">
+    <a class="nav-link nav-text" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
+</li>
+{% endblock %}
+
+{% block hero-image-type %}
+<div class = "hero-image">
+{% endblock %}
+
+{% block desktop-home-nav %}
+<li class="nav-item active">
+    <a class="nav-link nav-text nav-text--light" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
+</li>
+{% endblock %}
+
+{% block body %}
+<main>
+  <div class = "container content-top">
+    <p class = "heading-text text-center" id="intro">
+      Your New Authorized T-Mobile Dealer <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/cell-phone.png">
+    </p>
+    <hr class="padding-bottom"/>
+    <div class="row">
+        <div class="col-lg-6">
+            <p class="attribute-heading-text">
+                Competitive Pricing <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/money.png">
+            </p>
+            <p class="reading-font">
+                Broke your phone? Don't worry about it, at All Wireless, we charge modestly for all screen repairs, battery
+                replacements and most common phone issues.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <p class="attribute-heading-text">
+                Lightning-Fast Service <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/lightning-bolt.png">
+            </p>
+            <p class="reading-font">
+                Broke your phone? Don't worry about it, at All Wireless, we charge modestly for all screen repairs, battery
+                replacements and most common phone issues.
+            </p>
+        </div>
+    </div>
+  	<div class="row padding-bottom padding-top">
+      <div class="col-lg-12 align-self-center">
+        <p class = "heading-text text-center">
+            From Humble Beginnings <img class ="attribute-icon" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
+        </p>
+        <p class = "reading-font">
+            Since 1999, we've striven to deliver the best possible experience to customers with afflicted devices. We started off 
+            fixing pagers back in the 90s, and now we offer repair services to virtually all mainstream smartphones.
+        </p>
+        <br>
+        <p class = "reading-font">
+            Additionally, we are an authorized T-Mobile dealer. Whether it be renewing your current phone plan, or starting a new one,
+            we've got you covered!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="black-background">
+  	<div class="container-fluid">
+  		<p class = "heading-text text-center padding-bottom padding-top">Your Experience</p>
+	    <div class="row">
+	      <div class="col-lg-2"></div>
+	      <div class="col-lg-7">
+	        <div class="attribute-heading-text padding-bottom">Simple and Elegant</div>
+	        <div class = "attribute-body-text text-left">
+                We don't waste your time with any of the details. All you need to do is walk in, ask for a repair, and we'll
+                give you a quote and estimated time of completion
+	        </div>
+	      </div>
+	    </div>
+	    <br>
+	    <div class="row">
+	      <div class="col-lg-3"></div>
+	      <div class="col-lg-7">
+	        <div class="attribute-heading-text padding-bottom">Honesty and Integrity</div>
+	        <div class = "attribute-body-text text-left">
+                We hear out any request you may have. If we can't handle that request, we will redirect you to another 
+                business that will take care of you.
+	        </div>
+	      </div>
+	    </div>
+	    <br>
+	    <div class="row">
+	      <div class="col-lg-4"></div>
+	      <div class="col-lg-7">
+	        <div class="attribute-heading-text padding-bottom"></div>
+	        <div class = "attribute-body-text text-left">
+            Programming is a very serious tool and can be used to create a very large (and useful) project. I'd like to play
+            a part in the development of a great product.
+	        </div>
+	      </div>
+	    </div>
+	    <br><br><br>
+  	</div>  
+  </div>
+  <div class="container">
+    <p class = "heading-text padding-top padding-bottom text-center">
+      Discover my work <img src="https://img.icons8.com/nolan/64/000000/cafe.png">
+    </p>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="reading-font">
+        Now that we're well acquainted, take some time to look through my work. If you're looking to see projects I'm currently working on, check out my
+        <a style = "color: #696969" href = "http://github.com/wkatbey">Github</a>. If you're an employer, looking for a detailed, technical skillset, you'll find all that and more in
+        <a style = "color: #696969" href = "{% url 'static_website:resume' %}">Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <p class = "heading-text padding-top padding-bottom text-center">
+      Let's get in contact <img src="https://img.icons8.com/nolan/64/000000/contacts.png">
+    </p>
+    <div class="row">
+      <div class = "col-lg-4">
+        <div class="card border-secondary mb-3" style="max-width: 25rem;">
+          <div class="card-header">Wassim Katbey</div>
+          <div class="card-body text-secondary">
+            <p class="card-text">Phone Number: (313)-421-0627</p>
+            <p class="card-text">Email: katbeywassim@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class = "col-lg-7">
+        <div class = "reading-font">
+          You can call me from Monday-Friday, 10AM-6PM. Additionally, you can send me an email any day of the week, I check my email often
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

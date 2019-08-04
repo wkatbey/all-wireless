@@ -1,0 +1,133 @@
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Wassim Katbey">
+  <title>All Wireless</title>
+  <link rel="stylesheet" href="{% static 'static_website/buttons.css' %}">
+  <link rel="stylesheet" href="{% static 'static_website/navbar_style.css' %}">
+  <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'static_website/custom_stylesheet.css' %}">
+  <link rel="stylesheet" href="{% static 'static_website/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'static_website/spacing.css' %}">
+  <link rel="stylesheet" href="{% static 'static_website/hero_properties.css' %}">
+  <link rel="stylesheet" href="{% static 'static_website/icons.css' %}">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  {% block head_elements %}
+  {% endblock %}
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-blue navbar-mobile">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMobileContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMobileContent">
+    <ul class="navbar-nav ml-auto navbar-right">
+    {% block mobile-home-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
+      </li>
+    {% endblock %}
+    {% block mobile-resume-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text" href="{% url 'static_website:resume' %}"><i class="fas fa-file-signature"></i> Resume</a>
+      </li>
+    {% endblock %}
+    {% block mobile-blog-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text" href="{% url 'blog:blog-list' %}"><i class="fas fa-blog"></i> SkyBlue Blogging</a>
+      </li>
+    {% endblock %}
+      <li class = "nav-item">
+        <a class="nav-link nav-text" href="http://github.com/wkatbey"><i class="fab fa-github"></i> Github</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+{% block hero-image-type %}
+<div class = "hero-image">
+{% endblock %}
+  <nav class="navbar navbar-expand-lg navbar-transparent navbar-desktop">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto navbar-right">
+        {% block desktop-home-nav %}
+          <li class="nav-item">
+            <a class="nav-link nav-text nav-text--light" href="{% url 'static_website:index' %}">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+        {% endblock %}
+        {% block desktop-resume-nav %}
+          <li class="nav-item">
+            <a class="nav-link nav-text nav-text--light" href="{% url 'static_website:resume' %}"><i class="fas fa-file-signature"></i> Resume</a>
+          </li>
+        {% endblock %}
+        {% block desktop-blog-nav %}
+          <li class="nav-item">
+            <a class="nav-link nav-text nav-text--light" href="{% url 'blog:blog-list' %}">
+              <i class="fas fa-blog"></i> SkyBlue Blogging
+            </a>
+          </li>
+        {% endblock %}
+        {% block blog-profile-link %}
+        {% endblock %}
+        {% block blog-create-link %}
+        {% endblock %}
+          <li class = "nav-item">
+            <a class="nav-link nav-text nav-text--light" href="http://github.com/wkatbey"><i class="fab fa-github"></i> Github</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  {% block hero-image-text %}
+  <div class = "hero-text text-center">
+  </div>
+  {% endblock %}
+</div>
+
+
+{% block body %}
+
+{% endblock %}
+
+
+<footer class="footer" style = "margin-top: 5%">
+{% block custom_footer_elements %}
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <a class="text-muted" href="https://icons8.com/icon/77154/identity-theft">
+          Check out Icons8! I used their icons
+        </a>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-lg-6">
+        <span class="text-muted">Copyright &copy Wassim Katbey 2018</span>
+      </div>
+    </div>
+    <br>
+  </div>
+{% endblock %}   
+</footer>
+
+
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.1.0/email.min.js"></script>
+</body>
+</html>
