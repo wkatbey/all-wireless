@@ -79,16 +79,6 @@ html {
     padding-top: 0px;
 }
 
-.hide-on-mobile {
-    display: block;
-}
-
-
-
-
-
-
-
 /* ----------- Retina Screens ----------- */
 
 @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {}
@@ -179,7 +169,7 @@ html {
     div.padding-on-mobile {
         padding-top: 10px;
     }
-    div.hide-on-mobile {
+    .hide-on-mobile {
         display: none;
     }
 }
@@ -238,11 +228,11 @@ html {
     div.padding-on-mobile {
         padding-top: 10px;
     }
-    div.hide-on-mobile {
-        display: none;
-    }
     div.hero-text {
         transform: translate(1rem, 1rem);
+    }
+    .hide-on-mobile {
+        display: none;
     }
 }
 
@@ -315,8 +305,5 @@ html {
     }
     div.padding-on-mobile {
         padding-top: 10px;
-    }
-    div.hide-on-mobile {
-        display: none;
     }
 }

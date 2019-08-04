@@ -54,45 +54,51 @@
     </ul>
   </div>
 </nav>
-
+<nav class="navbar navbar-expand-lg navbar-transparent navbar-desktop">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto navbar-right">
+    {% block desktop-home-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text nav-text--dark" href="{% url 'static_website:index' %}">
+          <i class="fas fa-home"></i> Home
+        </a>
+      </li>
+    {% endblock %}
+    {% block desktop-resume-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text nav-text--dark" href=""><i class="fas fa-file-signature"></i> Resume</a>
+      </li>
+    {% endblock %}
+    {% block desktop-blog-nav %}
+      <li class="nav-item">
+        <a class="nav-link nav-text nav-text--dark" href="{% url 'blog:blog-list' %}">
+          <i class="fas fa-blog"></i> SkyBlue Blogging
+        </a>
+      </li>
+    {% endblock %}
+    {% block blog-profile-link %}
+    {% endblock %}
+    {% block blog-create-link %}
+    {% endblock %}
+      <li class = "nav-item">
+        <a class="nav-link nav-text nav-text--dark" href="http://github.com/wkatbey"><i class="fab fa-github"></i> Github</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% block page_title %}
+    <p class="page-title-font text-center padding-bottom padding-top">
+        All Wireless, Inc
+    </p>
+{% endblock %}
+    
 {% block hero-image-type %}
 <div class = "hero-image">
 {% endblock %}
-  <nav class="navbar navbar-expand-lg navbar-transparent navbar-desktop">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto navbar-right">
-        {% block desktop-home-nav %}
-          <li class="nav-item">
-            <a class="nav-link nav-text nav-text--light" href="{% url 'static_website:index' %}">
-              <i class="fas fa-home"></i> Home
-            </a>
-          </li>
-        {% endblock %}
-        {% block desktop-resume-nav %}
-          <li class="nav-item">
-            <a class="nav-link nav-text nav-text--light" href=""><i class="fas fa-file-signature"></i> Resume</a>
-          </li>
-        {% endblock %}
-        {% block desktop-blog-nav %}
-          <li class="nav-item">
-            <a class="nav-link nav-text nav-text--light" href="{% url 'blog:blog-list' %}">
-              <i class="fas fa-blog"></i> SkyBlue Blogging
-            </a>
-          </li>
-        {% endblock %}
-        {% block blog-profile-link %}
-        {% endblock %}
-        {% block blog-create-link %}
-        {% endblock %}
-          <li class = "nav-item">
-            <a class="nav-link nav-text nav-text--light" href="http://github.com/wkatbey"><i class="fab fa-github"></i> Github</a>
-          </li>
-        </ul>
-      </div>
-  </nav>
+
   {% block hero-image-text %}
   <div class = "hero-text text-center">
   </div>

@@ -1,3 +1,7 @@
+.hero-icon {
+    padding-left: 2rem;
+}
+
 .icon-heading-container {
     display: flex;
     justify-content: center;

@@ -2,6 +2,11 @@
     --gray-link: #696969;
 }
 
+.page-title-font {
+    font-size: 2.9rem;
+    font-weight: 400;
+}
+
 .heading-text {
     font-size: 2rem;
     font-weight: 300;

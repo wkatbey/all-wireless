@@ -3,10 +3,20 @@
 
 {% block hero-image-text %}
 <div class="container-fluid hero-text">
-  <p class="hero-home-heading text-center">All Wireless Inc</p>  
-  <p class = "hero-home-subheading text-center">
-    Authorized Dealer and Phone Repairs
-  </p>
+    <p class = "hero-home-subheading text-center">
+        Authorized Dealer and Phone Repairs
+    </p>
+    <div class="row padding-top padding-bottom">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-6">
+            <img src="https://img.icons8.com/dusk/64/000000/shopping-cart.png">
+            <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/iphone-x.png">
+            <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/ipad.png">
+            <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/android-tablet.png">
+            <img class="hero-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/sim-card-chip.png">
+            <img class="hero-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/cellular-network.png">
+        </div>
+    </div>
 </div>
 {% endblock %}
 
@@ -22,7 +32,7 @@
 
 {% block desktop-home-nav %}
 <li class="nav-item active">
-    <a class="nav-link nav-text nav-text--light" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
+    <a class="nav-link nav-text nav-text--dark" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
 </li>
 {% endblock %}
 
