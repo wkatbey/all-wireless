@@ -4,6 +4,6 @@ from . import views
 
 app_name = 'static_website'
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('resume/', views.resume, name='resume'),
+    path('', views.Home.as_view(), name='index'),
+    #path('about/', views.About.as_view(), name='about'),
 ]

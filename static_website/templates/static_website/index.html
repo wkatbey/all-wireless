@@ -1,4 +1,5 @@
 {% extends './base.html' %}
+{% load crispy_forms_tags %}
 
 {% block hero-image-text %}
 <div class="container-fluid hero-text">
@@ -28,11 +29,11 @@
 {% block body %}
 <main>
   <div class = "container content-top">
-    <p class = "heading-text text-center" id="intro">
+    <p class = "heading-text text-center padding-top" id="intro">
       Your New Authorized T-Mobile Dealer <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/cell-phone.png">
     </p>
     <hr class="padding-bottom"/>
-    <div class="row">
+    <div class="row padding-bottom padding-top">
         <div class="col-lg-6">
             <p class="attribute-heading-text">
                 Competitive Pricing <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/money.png">
@@ -52,9 +53,9 @@
             </p>
         </div>
     </div>
-  	<div class="row padding-bottom padding-top">
+  	<div class="row padding-bottom">
       <div class="col-lg-12 align-self-center">
-        <p class = "heading-text text-center">
+        <p class = "heading-text text-center padding-bottom padding-top">
             From Humble Beginnings <img class ="attribute-icon" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
         </p>
         <p class = "reading-font">
@@ -69,80 +70,132 @@
       </div>
     </div>
   </div>
-  <div class="black-background">
-  	<div class="container-fluid">
+  <div class="black-background padding-top">
+  	<div class="container">
   		<p class = "heading-text text-center padding-bottom padding-top">Your Experience</p>
 	    <div class="row">
-	      <div class="col-lg-2"></div>
-	      <div class="col-lg-7">
+	      <div class="col-lg-4">
 	        <div class="attribute-heading-text padding-bottom">Simple and Elegant</div>
 	        <div class = "attribute-body-text text-left">
                 We don't waste your time with any of the details. All you need to do is walk in, ask for a repair, and we'll
                 give you a quote and estimated time of completion
 	        </div>
-	      </div>
-	    </div>
-	    <br>
-	    <div class="row">
-	      <div class="col-lg-3"></div>
-	      <div class="col-lg-7">
-	        <div class="attribute-heading-text padding-bottom">Honesty and Integrity</div>
+        </div>
+        <div class="col-lg-4">
+          <div class="attribute-heading-text padding-bottom">Honesty and Integrity</div>
 	        <div class = "attribute-body-text text-left">
                 We hear out any request you may have. If we can't handle that request, we will redirect you to another 
                 business that will take care of you.
 	        </div>
-	      </div>
-	    </div>
-	    <br>
-	    <div class="row">
-	      <div class="col-lg-4"></div>
-	      <div class="col-lg-7">
-	        <div class="attribute-heading-text padding-bottom"></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="attribute-heading-text padding-bottom">Quick Service</div>
 	        <div class = "attribute-body-text text-left">
-            Programming is a very serious tool and can be used to create a very large (and useful) project. I'd like to play
-            a part in the development of a great product.
+            Our customers are tended to as soon as they enter our doors. No customer's request is left unanswered. 
 	        </div>
-	      </div>
+        </div>
 	    </div>
-	    <br><br><br>
-  	</div>  
+      <br>
+    </div>
   </div>
-  <div class="container">
+  <div class="container padding-bottom">
     <p class = "heading-text padding-top padding-bottom text-center">
-      Discover my work <img src="https://img.icons8.com/nolan/64/000000/cafe.png">
+      Where Can You Find Us? <img src="https://img.icons8.com/dusk/50/000000/worldwide-location.png">
     </p>
     <div class="row">
       <div class="col-lg-12">
-        <div class="reading-font">
-        Now that we're well acquainted, take some time to look through my work. If you're looking to see projects I'm currently working on, check out my
-        <a style = "color: #696969" href = "http://github.com/wkatbey">Github</a>. If you're an employer, looking for a detailed, technical skillset, you'll find all that and more in
-        <a style = "color: #696969" href = "{% url 'static_website:resume' %}">Resume</a>
-        </div>
+        <p class="text-center reading-font">
+          14631 W Warren Ave, Dearborn, MI
+          <div id="map">
+
+          </div>
+        </p>
       </div>
     </div>
   </div>
-  <br>
-  <div class="container">
-    <p class = "heading-text padding-top padding-bottom text-center">
-      Let's get in contact <img src="https://img.icons8.com/nolan/64/000000/contacts.png">
-    </p>
-    <div class="row">
-      <div class = "col-lg-4">
-        <div class="card border-secondary mb-3" style="max-width: 25rem;">
-          <div class="card-header">Wassim Katbey</div>
-          <div class="card-body text-secondary">
-            <p class="card-text">Phone Number: (313)-421-0627</p>
-            <p class="card-text">Email: katbeywassim@gmail.com</p>
+  <div class="black-background padding-top">
+    <div class="container">
+      <p class = "heading-text padding-top padding-bottom text-center">
+        Need to Get in Contact? <img src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
+      </p>
+      <div class="row padding-bottom">
+        <div class = "col-lg-4">
+          <div class="card border-secondary mb-3" style="max-width: 25rem;">
+            <div class="card-header text-secondary">Wassim Katbey</div>
+            <div class="card-body text-secondary">
+              <p class="card-text">Phone Number: (313) 945-0303</p>
+              <p class="card-text">Email: allwirelessinc@att.net</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class = "col-lg-7">
-        <div class = "reading-font">
-          You can call me from Monday-Friday, 10AM-6PM. Additionally, you can send me an email any day of the week, I check my email often
+        <div class = "col-lg-7">
+          <p class="reading-font">
+            Got any questions, or need a repair? You can call during our business hours!
+          </p>
+          <p class="reading-font">
+            Sunday: 10AM - 6PM
+          </p>
+          <p class="reading-font">
+            Monday - Saturday: 9AM - 8PM
+          </p>
         </div>
       </div>
     </div>
   </div>
+  <div class="container">
+    <p class="heading-text text-center padding-bottom padding-top">
+      Send Us an Email!
+    </p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form.first_name | as_crispy_field }}
+            </div>
+            <div class="col-lg-6">
+                {{ form.last_name | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form.email | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                {{ form.inquiry | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button type="submit" class="btn btn-outline-dark btn-block">Send</button>
+            </div>
+        </div>
+        <input type="hidden" name="location" value="14631 W Warren Ave, Dearborn, MI">    
+    </form>
+  </div>
 </main>
+
+<script>
+  // Initialize and add the map
+  function initMap() {
+    // The location of Uluru
+    var uluru = {lat: -25.344, lng: 131.036};
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+  }
+</script>
+
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1MJmF25c-1Ms8M3M5s0_FmAEWF0pco_8&callback=initMap">
+</script>
 
 {% endblock %}
