@@ -10,9 +10,9 @@
         <img src="https://img.icons8.com/dusk/64/000000/shopping-cart.png">
         <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/iphone-x.png">
         <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/ipad.png">
-        <img class="hero-icon" src="https://img.icons8.com/dusk/64/000000/android-tablet.png">
-        <img class="hero-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/sim-card-chip.png">
-        <img class="hero-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/cellular-network.png">
+        <img class="hero-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/android-tablet.png">
+        <img class="hero-icon hide-on-tablet hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/sim-card-chip.png">
+        <img class="hero-icon hide-on-tablet hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/cellular-network.png">
     </p>
 </div>
 {% endblock %}
@@ -31,13 +31,13 @@
 <main>
   <div class = "container content-top" id="about_us">
     <p class = "heading-text text-center padding-top">
-      Your New Authorized T-Mobile Dealer <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/cell-phone.png">
+      Your New Authorized T-Mobile Dealer <img class="attribute-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/cell-phone.png">
     </p>
     <hr class="padding-bottom"/>
     <div class="row padding-bottom padding-top">
         <div class="col-lg-6">
             <p class="attribute-heading-text">
-                Competitive Pricing <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/money.png">
+                Competitive Pricing <img class="attribute-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/money.png">
             </p>
             <p class="reading-font">
                 Broke your phone? Don't worry about it, at All Wireless, we charge modestly for all screen repairs, battery
@@ -46,7 +46,7 @@
         </div>
         <div class="col-lg-6 pt-5 pt-lg-0">
             <p class="attribute-heading-text">
-                Lightning-Fast Service <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/lightning-bolt.png">
+                Lightning-Fast Service <img class="attribute-icon hide-on-mobile" src="https://img.icons8.com/dusk/64/000000/lightning-bolt.png">
             </p>
             <p class="reading-font">
                 Broke your phone? Don't worry about it, at All Wireless, we charge modestly for all screen repairs, battery
@@ -57,7 +57,7 @@
   	<div class="row padding-bottom">
       <div class="col-lg-12 align-self-center">
         <p class = "heading-text text-center padding-bottom padding-top">
-            A Head Start in the Game <img class ="attribute-icon" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
+            A Head Start in the Game <img class ="attribute-icon hide-on-mobile" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
         </p>
         <p class = "reading-font">
             Since the late 90s, we've striven to deliver the best possible experience to customers with afflicted devices. We started off 
@@ -100,14 +100,13 @@
   </div>
   <div class="container padding-bottom" id="location">
     <p class = "heading-text padding-top padding-bottom text-center">
-      Where Can You Find Us? <img src="https://img.icons8.com/dusk/50/000000/worldwide-location.png">
+      Where Can You Find Us? <img class="hide-on-mobile" src="https://img.icons8.com/dusk/50/000000/worldwide-location.png">
     </p>
     <div class="row">
       <div class="col-lg-12">
         <p class="text-center reading-font">
           14631 W Warren Ave, Dearborn, MI
           <div id="map">
-
           </div>
         </p>
       </div>
@@ -116,7 +115,7 @@
   <div class="black-background padding-top" id="contact_us">
     <div class="container">
       <p class = "heading-text padding-top padding-bottom text-center">
-        Need to Get in Contact? <img src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
+        Need to Get in Contact? <img class="hide-on-mobile" src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
       </p>
       <div class="row padding-bottom">
         <div class = "col-lg-4">
@@ -177,6 +176,7 @@
 </main>
 
 <script>
+  /*
   function initMap() {
     var myCenter = new google.maps.LatLng(42.344120,-83.171990)
     var mapProp= {
@@ -186,7 +186,7 @@
     var map=new google.maps.Map(document.getElementById("map"),mapProp);
     var marker = new google.maps.Marker({position: myCenter })
     marker.setMap(map);
-  }
+  }*/
 </script>
 
 

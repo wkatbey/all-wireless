@@ -231,7 +231,7 @@ html {
     div.hero-text {
         transform: translate(1rem, 1rem);
     }
-    .hide-on-mobile {
+    .hide-on-tablet {
         display: none;
     }
 }
