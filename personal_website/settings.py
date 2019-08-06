@@ -31,15 +31,13 @@ SECRET_KEY = '96p@!zf_lb47kmgvpn98b0%7*zdt8ngi)pfu!#z_y+4(!v#6qg'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "wassimkatbey.com"
+    
 ]
 
 # Application definition
 
 INSTALLED_APPS = [
     'static_website.apps.StaticWebsiteConfig',
-    'blog.apps.BlogConfig',
-    'user.apps.UserConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -143,24 +141,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static_website/static/'),
-    os.path.join(BASE_DIR, 'blog/static/'),
 ]
 
 django_heroku.settings(locals())
 
-if not DEBUG:
-    del DATABASES['default']['OPTIONS']['sslmode']
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MESSAGE_LEVEL = messages.DEBUG
-
-MESSAGE_TAGS = {
-    messages.DEBUG: 'alert-info',
-    messages.INFO: 'alert-info',
-    messages.SUCCESS: 'alert-success',
-    messages.WARNING: 'alert-warning',
-    messages.ERROR: 'alert-danger',
-}
-
-LOGIN_REDIRECT_URL = reverse_lazy('blog:blog-list')
