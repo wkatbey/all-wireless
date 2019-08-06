@@ -30,16 +30,10 @@
 <div class = "hero-image">
 {% endblock %}
 
-{% block desktop-home-nav %}
-<li class="nav-item active">
-    <a class="nav-link nav-text nav-text--dark" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
-</li>
-{% endblock %}
-
 {% block body %}
 <main>
-  <div class = "container content-top">
-    <p class = "heading-text text-center padding-top" id="intro">
+  <div class = "container content-top" id="about_us">
+    <p class = "heading-text text-center padding-top">
       Your New Authorized T-Mobile Dealer <img class="attribute-icon" src="https://img.icons8.com/dusk/64/000000/cell-phone.png">
     </p>
     <hr class="padding-bottom"/>
@@ -66,10 +60,10 @@
   	<div class="row padding-bottom">
       <div class="col-lg-12 align-self-center">
         <p class = "heading-text text-center padding-bottom padding-top">
-            From Humble Beginnings <img class ="attribute-icon" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
+            A Head Start in the Game <img class ="attribute-icon" src="https://img.icons8.com/cotton/64/000000/mission-of-a-company.png">
         </p>
         <p class = "reading-font">
-            Since 1999, we've striven to deliver the best possible experience to customers with afflicted devices. We started off 
+            Since the late 90s, we've striven to deliver the best possible experience to customers with afflicted devices. We started off 
             fixing pagers back in the 90s, and now we offer repair services to virtually all mainstream smartphones.
         </p>
         <br>
@@ -82,8 +76,8 @@
   </div>
   <div class="black-background padding-top">
   	<div class="container">
-  		<p class = "heading-text text-center padding-bottom padding-top">Your Experience</p>
-	    <div class="row">
+  		<p class = "heading-text text-center padding-bottom">Our Process</p>
+	    <div class="row padding-bottom">
 	      <div class="col-lg-4">
 	        <div class="attribute-heading-text padding-bottom">Simple and Elegant</div>
 	        <div class = "attribute-body-text text-left">
@@ -105,10 +99,9 @@
 	        </div>
         </div>
 	    </div>
-      <br>
     </div>
   </div>
-  <div class="container padding-bottom">
+  <div class="container padding-bottom" id="location">
     <p class = "heading-text padding-top padding-bottom text-center">
       Where Can You Find Us? <img src="https://img.icons8.com/dusk/50/000000/worldwide-location.png">
     </p>
@@ -123,7 +116,7 @@
       </div>
     </div>
   </div>
-  <div class="black-background padding-top">
+  <div class="black-background padding-top" id="contact_us">
     <div class="container">
       <p class = "heading-text padding-top padding-bottom text-center">
         Need to Get in Contact? <img src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
@@ -131,7 +124,7 @@
       <div class="row padding-bottom">
         <div class = "col-lg-4">
           <div class="card border-secondary mb-3" style="max-width: 25rem;">
-            <div class="card-header text-secondary">Wassim Katbey</div>
+            <div class="card-header text-secondary">All Wireless, Inc</div>
             <div class="card-body text-secondary">
               <p class="card-text">Phone Number: (313) 945-0303</p>
               <p class="card-text">Email: allwirelessinc@att.net</p>
@@ -181,23 +174,38 @@
                 <button type="submit" class="btn btn-outline-dark btn-block">Send</button>
             </div>
         </div>
-        <input type="hidden" name="location" value="14631 W Warren Ave, Dearborn, MI">    
+        <input type="hidden" name="location" value="14631 Warren Ave, Dearborn, MI">    
     </form>
   </div>
 </main>
 
 <script>
-  // Initialize and add the map
   function initMap() {
-    // The location of Uluru
-    var uluru = {lat: -25.344, lng: 131.036};
-    // The map, centered at Uluru
-    var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: uluru});
-    // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: uluru, map: map});
+      var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 8,
+      center: {lat: -34.397, lng: 150.644}
+      });
+      var geocoder = new google.maps.Geocoder();
+      geocodeAddress(geocoder, map);
+    
+  }
+      
+  function geocodeAddress(geocoder, resultsMap) {
+    var address = document.getElementById('location').value;
+    geocoder.geocode({'address': address}, function(results, status) {
+      if (status === 'OK') {
+        resultsMap.setCenter(results[0].geometry.location);
+        var marker = new google.maps.Marker({
+          map: resultsMap,
+          position: results[0].geometry.location
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
   }
 </script>
+
 
 <!--Load the API from the specified URL
 * The async attribute allows the browser to render the page while the API loads
