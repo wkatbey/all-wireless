@@ -148,3 +148,5 @@ django_heroku.settings(locals())
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MESSAGE_LEVEL = messages.DEBUG
+
+SECURE_SSL_REDIRECT = True
