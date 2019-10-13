@@ -1,14 +1,15 @@
 .hero-image {
-    background-image: linear-gradient(to right, #74ebd5, #ACB6E5);
-    height: 20rem;
+    background-image: linear-gradient(to right, #0575E6, #021B79);
+    height: 22rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
 .hero-sub-image {
-    background-image: url("./cover-image-3.jpg");
-    height: 40rem;
+    background-image: url("antique-phones.jpg");
+    height: 35rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,6 +64,7 @@
     color: #000000;
     text-align: center;
 }
+
 
 /* ----------- Non-Retina Screens ----------- */
 
@@ -120,6 +122,7 @@
     }
 }
 
+
 /*Extra Small Devices*/
 
 @media (min-device-width: 300px) and (max-device-width: 575.98px) {
@@ -164,4 +167,3 @@
         background-image: linear-gradient(to right, #56CCF2, #2F80ED);
     }
 }
-
