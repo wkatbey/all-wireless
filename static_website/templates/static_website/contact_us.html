@@ -1,0 +1,104 @@
+{% extends './base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div class="container padding-bottom" id="location">
+    <p class = "heading-text padding-top padding-bottom text-center">
+        Where Can You Find Us? <img class="hide-on-mobile" src="https://img.icons8.com/dusk/50/000000/worldwide-location.png">
+    </p>
+    <div class="row">
+        <div class="col-lg-12">
+        <p class="text-center reading-font">
+            14631 W Warren Ave, Dearborn, MI
+            <div id="map">
+            </div>
+        </p>
+        </div>
+    </div>
+    </div>
+    <div class="black-background padding-top" id="contact_us">
+    <div class="container">
+        <p class = "heading-text padding-top padding-bottom text-center">
+        Need to Get in Contact? <img class="hide-on-mobile" src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
+        </p>
+        <div class="row padding-bottom">
+        <div class = "col-lg-4">
+            <div class="card border-secondary mb-3" style="max-width: 25rem;">
+            <div class="card-header text-secondary">All Wireless, Inc</div>
+            <div class="card-body text-secondary">
+                <p class="card-text">Phone Number: (313) 945-0303</p>
+                <p class="card-text">Email: allwirelessinc@att.net</p>
+            </div>
+            </div>
+        </div>
+        <div class = "col-lg-7">
+            <p class="reading-font">
+            Got any questions, or need a repair? You can call during our business hours!
+            </p>
+            <p class="reading-font">
+            Sunday: 10AM - 6PM
+            </p>
+            <p class="reading-font">
+            Monday - Saturday: 9AM - 8PM
+            </p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+    <p class="heading-text text-center padding-bottom padding-top">
+        Send Us an Email!
+    </p>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form.first_name | as_crispy_field }}
+            </div>
+            <div class="col-lg-6">
+                {{ form.last_name | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                {{ form.email | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                {{ form.inquiry | as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <button type="submit" class="btn btn-outline-dark btn-block">Send</button>
+            </div>
+        </div>
+        <input type="hidden" name="location" value="14631 Warren Ave, Dearborn, MI">    
+    </form>
+</div>
+{% endblock %}
+
+
+<script>
+function initMap() {
+    var myCenter = new google.maps.LatLng(42.344120,-83.171990)
+    var mapProp= {
+    center: myCenter,
+    zoom:12,
+    };
+    var map=new google.maps.Map(document.getElementById("map"),mapProp);
+    var marker = new google.maps.Marker({position: myCenter })
+    marker.setMap(map);
+}
+</script>
+
+
+<!--Load the API from the specified URL
+* The async attribute allows the browser to render the page while the API loads
+* The key parameter will contain your own API key (which is not needed for this tutorial)
+* The callback parameter executes the initMap() function
+-->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1MJmF25c-1Ms8M3M5s0_FmAEWF0pco_8&callback=initMap">
+</script>

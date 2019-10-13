@@ -6,8 +6,11 @@ from django.core.mail import send_mail
 COMPANY_EMAIL = 'allwirelessinc@att.net'
 DEFAULT_SUBJECT = 'Website Email'
 
-class Home(View):
+class Home(TemplateView):
     template_name = 'static_website/index.html'
+
+class ContactUs(View):
+    template_name = 'static_website/contact_us.html'
 
     def get(self, request):
         form = ContactForm()
@@ -36,4 +39,3 @@ class Home(View):
 
         form = ContactForm()
         return redirect(request.path)
-
