@@ -1,6 +1,27 @@
 {% extends './base.html' %}
 {% load crispy_forms_tags %}
 
+{% block page_title %}
+{% endblock %}
+
+{% block hero-image-text %}
+<div class="container-fluid hero-text">
+    <p class="hero-subheading-font font-white text-center padding-bottom padding-top">
+        Our Brick and Mortar 
+    </p>
+</div>
+{% endblock %}
+
+{% block mobile-home-nav %}
+<li class="nav-item active">
+    <a class="nav-link nav-text" href="{% url 'static_website:index' %}"><i class="fas fa-home"></i> Home</a>
+</li>
+{% endblock %}
+
+{% block hero-image-type %}
+<div class = "hero-location-image">
+{% endblock %}
+
 {% block body %}
 <div class="container padding-bottom" id="location">
     <p class = "heading-text padding-top--2 padding-bottom text-center">
@@ -10,13 +31,13 @@
         <div class="col-lg-12">
         <p class="text-center reading-font">
             14631 W Warren Ave, Dearborn, MI
-            <!--<div id="map">
-            </div>-->
+            <div id="map">
+            </div>
         </p>
         </div>
     </div>
     </div>
-    <div class="black-background padding-top" id="contact_us">
+    <div class="hero-image padding-top" id="contact_us">
     <div class="container">
         <p class = "heading-text padding-top padding-bottom text-center">
         Need to Get in Contact? <img class="hide-on-mobile" src="https://img.icons8.com/cotton/64/000000/business-contact--v1.png">
